@@ -8,4 +8,5 @@ app.get('/', (req, res) =>{
 })
 app.use('/projects', projectRouter);
 app.use('/testimonials',testimonialsRouter);
-app.listen(8000);
+const port = process.env. PORT || 8000;
+app.listen(port, () => console.log(`Listening on port ${port} ...`));
